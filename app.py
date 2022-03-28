@@ -76,8 +76,11 @@ app = Flask(__name__)
 # Display a welcome message on the 'home' page
 @app.route('/')
 def index():
-	return render_template ('blog/index.html', title = "SREE RAMA CHARANA CF");
+	return render_template ('blog/index.html', title = "SREE RAMA CHARANA");
 	#return "Welcome to the demo app"
+@app.route('/Telugu')
+def telugu():
+	return render_template ('blog/telugu-index.html', title = "SREE RAMA CHARANA");
 
 # Add a new username
 #
