@@ -81,6 +81,12 @@ def index():
 @app.route('/Telugu')
 def telugu():
 	return render_template ('blog/telugu-index.html', title = "SREE RAMA CHARANA");
+@app.route('/committee', methods = ['GET', 'POST'])
+def committee():
+	return render_template ('blog/about_directors.html', title = "SREE RAMA CHARANA", name = "R.Mohan Rao", desig = "Chairman & Managing Director");
+@app.route('/committee_dv', methods = ['GET', 'POST'])
+def committee2():
+	return render_template ('blog/about_directors2.html', title = "SREE RAMA CHARANA", name = "D.V.RAMANA RAO", desig = "Executive Director");
 
 # Add a new username
 #
